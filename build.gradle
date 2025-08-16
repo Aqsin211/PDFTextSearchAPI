@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.5.4'
-    id 'io.spring.dependency-management' version '1.1.7'
+    id 'org.springframework.boot' version "$springFrameWorkVersion"
+    id 'io.spring.dependency-management' version "$dependencyManagementVersion"
 }
 
 group = 'az.company'
@@ -26,9 +26,9 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.apache.tika:tika-core:3.2.1'
-    implementation 'org.apache.tika:tika-parsers-standard-package:3.2.1'
-    implementation 'io.minio:minio:8.5.17'
+    implementation "org.apache.tika:tika-core:$tikaCoreVersion"
+    implementation "org.apache.tika:tika-parsers-standard-package:$tikaParsersVersion"
+    implementation "io.minio:minio:$minioVersion"
     implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
     implementation 'com.fasterxml.jackson.core:jackson-databind'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'

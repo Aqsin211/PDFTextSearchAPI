@@ -1,12 +1,14 @@
 spring:
   application:
     name: textSearchApp
+
   elasticsearch:
     uris: http://localhost:9200
     username: elastic
     password: changeme
     connection-timeout: 10s
     socket-timeout: 30s
+
   servlet:
     multipart:
       max-file-size: 50MB
